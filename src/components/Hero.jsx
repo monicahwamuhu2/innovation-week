@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Typography, Container, Button, Grid } from '@mui/material';
 import { motion, useAnimation } from 'framer-motion';
-import { Link } from 'react-scroll';
+// Removed unused 'Link' import
 
 // Simple Background Effects Component using CSS animations instead of Framer Motion
 const BackgroundEffects = () => (
@@ -99,6 +99,10 @@ const Hero = () => {
         ease: [0.6, -0.05, 0.01, 0.99]
       }
     })
+  };
+
+  const handleRegisterClick = () => {
+    window.open('https://forms.gle/tevnykMUzSEidqQB8', '_blank');
   };
 
   return (
@@ -231,16 +235,12 @@ const Hero = () => {
                 variants={fadeInUp}
                 style={{ display: 'flex', gap: '12px' }}
               >
+                {/* Regular button with onClick handler */}
                 <Button 
-                  component={Link}
-                  to="registration"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
                   variant="contained" 
                   color="primary"
                   size="large"
+                  onClick={handleRegisterClick}
                   sx={{ 
                     px: 3.5,
                     py: 1.2,

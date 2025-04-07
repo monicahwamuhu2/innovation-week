@@ -51,7 +51,7 @@ const benefits = [
 const Registration = () => {
   // Use callback to prevent recreation on each render
   const handleExternalRegistration = useCallback(() => {
-    window.open('https://external-registration-link.com', '_blank', 'noopener,noreferrer');
+    window.open('https://forms.gle/tevnykMUzSEidqQB8', '_blank', 'noopener,noreferrer');
   }, []);
 
   return (
@@ -255,7 +255,7 @@ const Registration = () => {
                     sx={{ color: '#64ffda' }}
                     underline="hover"
                   >
-                    innovation@mmu.ac.ke
+                    sb-mmu@ieee.org
                   </Link>
                 </Typography>
               </Paper>

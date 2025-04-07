@@ -4,14 +4,15 @@ export const AGENDA = [
     events: [
       {
         time: '7:30 PM – 9:00 PM',
-        title: 'Webinar – "The Power of Innovation: How Young Minds are Shaping the Future"',
-        description: 'Led by Geekssters',
-        type: 'webinar'
+        title: 'Webinar – "Building a Thriving Tech Ecosystem for Kenyan Women Entrepreneurs and Tech Enthusiasts."',
+        description: 'Guest: Karen Wanyama – Sanasana Sustainability\nModerator: Monicah Wamuhu - Geek-ssters',
+        type: 'webinar',
+        speakers: ['Karen Wanyama', 'Monicah Wamuhu']
       }
     ]
   },
   {
-    day: 'DAY 2 – 15TH APRIL 2025',
+    day: 'DAY 2 – 16TH APRIL 2025',
     events: [
       {
         time: '8:30 AM – 9:00 AM',
@@ -35,133 +36,116 @@ export const AGENDA = [
         type: 'break'
       },
       {
-        time: '11:00 AM – 11:45 AM',
-        title: 'Track 1: Smart Engineering & Sustainable Infrastructure',
-        description: 'Innovations in engineering, smart grids, infrastructure resilience, and renewable energy solutions',
-        type: 'track'
+        time: '11:00 AM – 11:30 AM',
+        title: 'Track 1: Tech for Impact: AI, Cybersecurity & Emerging Technologies',
+        description: 'AI, cybersecurity, blockchain, IoT, and how they shape digital transformation.',
+        type: 'track',
+        speakers: ['Patricia Muriira - Safaricom Intern', 'Moses Timbwa - Base East Africa Community']
       },
       {
-        time: '11:45 AM – 12:30 PM',
-        title: 'Track 2: Tech for Impact: AI, Cybersecurity & Emerging Technologies',
-        description: 'AI, cybersecurity, blockchain, IoT, and how they shape digital transformation.',
-        type: 'track'
+        time: '11:30 AM – 12:00 PM',
+        title: 'Track 2: Social Entrepreneurship & Startups for a Better Future',
+        description: 'Social entrepreneurship, business models for impact, and turning ideas into scalable startups.',
+        type: 'track',
+        speakers: ['Eng. Mutua Telvin - Mechanical Engineering Plant']
+      },
+      {
+        time: '12:00 PM – 12:30 PM',
+        title: 'Track 3: Global Policy, Innovation & SDGs',
+        description: 'How innovation supports the UN Sustainable Development Goals (SDGs), global diplomacy, and policy-making',
+        type: 'track',
+        speakers: ['Murage Wanyiri - KMUN', 'DUSG KMUN']
       },
       {
         time: '12:30 PM – 1:00 PM',
+        title: 'Digital Transformation',
+        description: '',
+        type: 'presentation',
+        speakers: ['Joel - Senior Developer - Safaricom']
+      },
+      {
+        time: '1:00 PM – 2:00 PM',
         title: 'Lunch Break',
         type: 'break'
       },
       {
-        time: '1:00 PM – 2:00 PM',
-        title: 'Departure for Industry Visit',
-        type: 'visit'
-      },
-      {
         time: '2:00 PM – 4:00 PM',
-        title: 'On-Site Industrial Experience',
-        type: 'visit'
+        title: 'Women In Engineering/Technology Session',
+        description: '',
+        type: 'panel',
+        speakers: ['Brains for AI']
       },
       {
-        time: '4:00 PM – 5:00 PM',
-        title: 'Departure from Industrial Site',
-        type: 'visit'
+        time: '4:00 PM – 4:30 PM',
+        title: 'Closing Remarks & Networking',
+        type: 'ceremony'
       }
     ]
   },
   {
-    day: 'DAY 3 – 16TH APRIL 2025',
+    day: 'DAY 3 – 17TH APRIL 2025',
     events: [
       {
-        time: '8:30 AM – 9:00 AM',
+        time: '8:00 AM – 8:30 AM',
         title: 'Registration, Networking & Settling',
         type: 'registration'
       },
       {
-        time: '9:00 AM – 10:30 AM',
-        title: 'Panel – "Building Your Startups: From Idea to Execution"',
+        time: '8:30 AM – 8:45 AM',
+        title: 'Opening Remarks',
+        description: '',
+        type: 'ceremony',
+        speakers: ['Prof. Eng, Abel N. Mayaka - Dean Faculty of Engineering and Technology']
+      },
+      {
+        time: '8:45 AM – 10:00 AM',
+        title: 'Keynote Address to Engineering Students',
+        description: '',
+        type: 'presentation',
+        speakers: ['Eng. Margaret Ogai - Registrar, Engineers Board of Kenya (EBK)']
+      },
+      {
+        time: '10:00 AM – 11:00 AM',
+        title: 'Distinguished Lecture Program',
+        description: '',
+        type: 'presentation',
+        speakers: ['Prof. Dr. Cristina Olaverri Monreal - JOHANNES KEPLER UNIVERSITY LINZ - IEEE Intelligent Transportation Systems Society (ITSS)']
+      },
+      {
+        time: '11:00 AM – 11:30 AM',
+        title: 'Tea Break',
+        type: 'break'
+      },
+      {
+        time: '11:30 AM – 1:00 PM',
+        title: 'ITSS Companies Session',
+        description: 'Interested companies session e.g. SeaCom etc',
         type: 'panel'
       },
       {
-        time: '10:30 AM – 11:00 AM',
-        title: 'Tea Break',
-        type: 'break'
+        time: '1:00 PM – 1:30 PM',
+        title: 'Panel Discussion: "Building Your Startups: From Idea to Execution"',
+        description: '',
+        type: 'panel',
+        speakers: ['Emmanuel Mariaria - Maabara Bunifu', 'Lenox Miheso - Agrovia']
       },
       {
-        time: '11:00 AM – 11:45 AM',
-        title: 'Track 3: Global Policy, Innovation & SDGs',
-        description: 'How innovation supports the UN Sustainable Development Goals (SDGs), global diplomacy, and policy-making',
-        type: 'track'
-      },
-      {
-        time: '11:45 AM – 12:30 PM',
-        title: 'Track 4: Social Entrepreneurship & Startups for a Better Future',
-        description: 'Social entrepreneurship, business models for impact, and turning ideas into scalable startups.',
-        type: 'track'
-      },
-      {
-        time: '12:30 PM – 1:00 PM',
+        time: '1:30 PM – 2:30 PM',
         title: 'Lunch Break',
         type: 'break'
       },
       {
-        time: '1:00 PM – 2:00 PM',
-        title: 'Departure for Industry Visit',
-        type: 'visit'
-      },
-      {
-        time: '2:00 PM – 4:00 PM',
-        title: 'On-Site Industrial Experience',
-        type: 'visit'
-      },
-      {
-        time: '4:00 PM – 5:00 PM',
-        title: 'Departure from Industrial Site',
-        type: 'visit'
-      }
-    ]
-  },
-  {
-    day: 'DAY 4 – 17TH APRIL 2025',
-    events: [
-      {
-        time: '8:30 AM – 9:00 AM',
-        title: 'Registration, Networking & Settling',
-        type: 'registration'
-      },
-      {
-        time: '9:00 AM – 10:30 AM',
-        title: 'Paper Presentations',
-        type: 'presentation'
-      },
-      {
-        time: '10:30 AM – 11:00 AM',
-        title: 'Tea Break',
-        type: 'break'
-      },
-      {
-        time: '11:00 AM – 12:30 PM',
-        title: 'Project Showcase',
+        time: '2:30 PM – 3:30 PM',
+        title: 'Projects Presentation',
         type: 'showcase'
       },
       {
-        time: '12:30 PM – 2:00 PM',
-        title: 'Lunch Break',
-        type: 'break'
-      },
-      {
-        time: '2:00 PM – 2:45 PM',
-        title: 'Panel – "The Entrepreneurial Mindset: Turning Ideas into Impactful Ventures"',
-        description: 'Startup Companies',
+        time: '3:30 PM – 4:00 PM',
+        title: 'Keynote: The Role of Institutions and Regulatory Bodies in Supporting Startups',
         type: 'panel'
       },
       {
-        time: '2:45 PM – 3:30 PM',
-        title: 'The Role of Regulatory Bodies in Supporting Startups',
-        description: 'IEK, EBK, EPRA, CAK, etc.',
-        type: 'panel'
-      },
-      {
-        time: '3:30 PM – 4:30 PM',
+        time: '4:00 PM – 4:30 PM',
         title: 'Awards Ceremony & Closing Remarks',
         description: 'Administration, Organizers',
         type: 'ceremony'
@@ -225,46 +209,46 @@ export const PARTNERS = [
 
 export const SPEAKERS = [
   {
-    name: 'Dr. Sarah Kimani',
-    role: 'AI Research Lead, Microsoft Africa',
+    name: 'Karen Wanyama',
+    role: 'Sanasana Sustainability',
     image: '/assets/images/speakers/speaker1.jpg',
-    bio: 'Leading AI research initiatives across Africa with a focus on sustainable technology solutions.',
-    topic: 'Ethical AI: Building Technology for Social Good'
+    bio: 'Expert in sustainable technology solutions and women entrepreneurship.',
+    topic: 'Building a Thriving Tech Ecosystem for Kenyan Women'
   },
   {
-    name: 'John Mwangi',
-    role: 'Founder & CEO, TechInnovate Kenya',
+    name: 'Patricia Muriira',
+    role: 'Safaricom Intern, Geek-ssters',
     image: '/assets/images/speakers/speaker2.jpg',
-    bio: 'Serial entrepreneur with multiple successful startups in East Africa.',
-    topic: 'From Idea to Impact: The Startup Journey'
+    bio: 'Up-and-coming technology specialist with focus on AI and cybersecurity.',
+    topic: 'Tech for Impact: AI and Cybersecurity'
   },
   {
-    name: 'Amina Hassan',
-    role: 'IoT Expert & Engineering Director, IBM Kenya',
+    name: 'Prof. Eng. Abel N. Mayaka',
+    role: 'Dean, Faculty of Engineering and Technology',
     image: '/assets/images/speakers/speaker3.jpg',
-    bio: 'Pioneer in implementing IoT solutions for African infrastructure challenges.',
-    topic: 'Smart Infrastructure: Connecting Africa Through IoT'
+    bio: 'Academic leader with extensive experience in engineering education.',
+    topic: 'Engineering Innovation in Kenya'
   },
   {
-    name: 'Prof. Robert Ochieng',
-    role: 'Director, Nairobi Innovation Hub',
+    name: 'Eng. Margaret Ogai',
+    role: 'Registrar, Engineers Board of Kenya (EBK)',
     image: '/assets/images/speakers/speaker4.jpg',
-    bio: 'Leading innovation policy development in East Africa for over 15 years.',
-    topic: 'Building Innovation Ecosystems in Emerging Markets'
+    bio: 'Leading professional engineering regulation in Kenya.',
+    topic: 'Engineering Education and Professional Development'
   },
   {
-    name: 'Grace Wambui',
-    role: 'Cybersecurity Specialist, Safaricom',
+    name: 'Prof. Dr. Cristina Olaverri Monreal',
+    role: 'JOHANNES KEPLER UNIVERSITY LINZ - IEEE ITSS',
     image: '/assets/images/speakers/speaker5.jpg',
-    bio: 'Expert in digital security with focus on financial technology protection.',
-    topic: 'Securing the Digital Future: Cybersecurity Challenges and Solutions'
+    bio: 'International expert in Intelligent Transportation Systems.',
+    topic: 'Innovations in Intelligent Transportation Systems'
   },
   {
-    name: 'Michael Otieno',
-    role: 'Climate Tech Entrepreneur',
+    name: 'Emmanuel Mariaria',
+    role: 'Maabara Bunifu',
     image: '/assets/images/speakers/speaker6.jpg',
-    bio: 'Founded three climate-focused startups addressing African environmental challenges.',
-    topic: 'Sustainable Innovation: Technology Solutions for Climate Change'
+    bio: 'Entrepreneur and innovator in the Kenyan startup ecosystem.',
+    topic: 'From Idea to Execution: The Startup Journey'
   }
 ];
 

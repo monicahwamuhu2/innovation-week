@@ -35,13 +35,13 @@ const Footer = () => {
           icon: <LocationOnIcon fontSize="small" /> 
         },
         { 
-          name: '+254 123 456 789', 
-          href: 'tel:+254123456789',
+          name: '+254 701 028284', 
+          href: 'tel:+254 701 028284',
           icon: <PhoneIcon fontSize="small" /> 
         },
         { 
-          name: 'innovationweek@mmu.ac.ke', 
-          href: 'mailto:innovationweek@mmu.ac.ke',
+          name: 'sb-mmu@ieee.org', 
+          href: 'mailto:sb-mmu@ieee.org',
           icon: <EmailIcon fontSize="small" /> 
         },
       ],

@@ -198,7 +198,7 @@ const Partners = () => {
                 underline="hover"
                 sx={{ color: 'white' }}
               >
-                partnerships@mmu.ac.ke
+                sb-mmu@ieee.org
               </Link>
               <Box component="span" sx={{ display: { xs: 'none', sm: 'block' } }}>|</Box>
               <Link 
@@ -206,7 +206,7 @@ const Partners = () => {
                 underline="hover"
                 sx={{ color: 'white' }}
               >
-                +254 123 456 789
+               +254 701 028284
               </Link>
             </Box>
           </motion.div>

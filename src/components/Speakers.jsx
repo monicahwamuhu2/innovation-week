@@ -4,13 +4,22 @@ import {
   Typography, 
   Container, 
   Grid, 
-  Card, 
-  alpha
+  Card,
+  CardContent,
+  CardMedia,
+  alpha,
+ 
+  Button,
+  Chip,
+  Link
 } from '@mui/material';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import SectionTitle from './commons/SectionTitle';
 import { useTheme } from '@mui/material/styles';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ArticleIcon from '@mui/icons-material/Article';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import SchoolIcon from '@mui/icons-material/School';
 
 // Optimized Particle animation component with memoization
 const ParticleBackground = React.memo(() => {
@@ -204,6 +213,21 @@ const Speakers = () => {
       }
     }
   }), []);
+
+  // Featured speaker data
+  const featuredSpeaker = {
+    name: "Univ.-Prof. Dr. Cristina Olaverri Monreal",
+    role: "Full Professor, Head of Department Intelligent Transport Systems",
+    organization: "JOHANNES KEPLER UNIVERSITY LINZ",
+    image: "/images/christine.jpg",
+    talk: "The Integration of Technology and Safety in Automated Vehicles",
+    bio: "Cristina Olaverri-Monreal is a full professor and head of the Department Intelligent Transport Systems at the Johannes Kepler University Linz, in Austria. She served as the president of the IEEE Intelligent Transportation Systems Society (IEEE ITSS) for the years 2022 and 2023 and is the IEEE Division IX Director-Elect and member of the 2026-2027 IEEE Board of Directors.",
+    linkedin: "https://www.linkedin.com/in/cristina-olaverri-monreal-06b41212/",
+    awards: ["IEEE Educational Activities Board Meritorious Achievement Award", "2023 IEEE MGA Diversity & Inclusion Award"],
+    time: "10:00 AM - 11:00 AM",
+    day: "April 17th, 2025",
+    extraInfo: "Distinguished Lecture Program"
+  };
   
   useEffect(() => {
     if (isInView) {
@@ -277,8 +301,9 @@ const Speakers = () => {
           initial="hidden"
           animate={controls}
         >
+          {/* Featured Speaker Card */}
           <Grid container spacing={4} justifyContent="center" sx={{ mb: 6 }}>
-            <Grid item xs={12} md={10} lg={8}>
+            <Grid item xs={12} md={10}>
               <motion.div variants={animationVariants.cardVariants}>
                 <Card
                   elevation={0}
@@ -291,8 +316,8 @@ const Speakers = () => {
                     bgcolor: 'rgba(17, 34, 64, 0.7)',
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
-                    textAlign: 'center',
-                    p: { xs: 3, md: 5 },
+                    transition: 'all 0.3s ease',
+                    p: 0,
                     '&::before': {
                       content: '""',
                       position: 'absolute',
@@ -305,107 +330,270 @@ const Speakers = () => {
                     },
                   }}
                 >
-                  <Box 
-                    component={motion.div} 
-                    variants={animationVariants.glowVariants}
-                    sx={{ 
-                      position: 'absolute', 
-                      top: '50%', 
-                      left: '50%', 
-                      transform: 'translate(-50%, -50%)', 
-                      width: '80%', 
-                      height: '80%', 
-                      borderRadius: '50%', 
-                      background: 'radial-gradient(circle, rgba(100, 255, 218, 0.1) 0%, rgba(100, 255, 218, 0) 70%)',
-                      zIndex: 0
-                    }}
-                  />
-                  
-                  <Box sx={{ position: 'relative', zIndex: 1 }}>
-                    <Typography 
-                      variant="h4" 
-                      component="h2"
-                      id="speakers-title"
-                      sx={{ 
-                        fontWeight: 700,
-                        mb: 3,
-                        background: 'linear-gradient(90deg, #64ffda, #88cfff)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        textShadow: '0 5px 15px rgba(100, 255, 218, 0.2)',
-                        fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
-                      }}
-                    >
-                      Speakers Will Be Announced Soon!
-                    </Typography>
-                    
-                    <motion.div 
-                      variants={animationVariants.pulseVariants}
-                      sx={{ 
-                        display: 'inline-flex',
+                  <Grid container>
+                    <Grid item xs={12} md={4}>
+                      <Box sx={{ 
+                        position: 'relative', 
+                        height: { xs: '300px', md: '350px' },
+                        display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        mb: 4
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          width: { xs: 80, md: 100 },
-                          height: { xs: 80, md: 100 },
-                          borderRadius: '50%',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          bgcolor: alpha(theme.palette.primary.main, 0.1),
-                          boxShadow: `0 0 30px ${alpha(theme.palette.primary.main, 0.3)}`,
-                        }}
-                      >
-                        <NotificationsActiveIcon 
-                          aria-hidden="true"
-                          sx={{ 
-                            fontSize: { xs: 36, md: 48 }, 
-                            color: 'primary.main'
-                          }} 
+                        bgcolor: 'rgba(10, 25, 47, 0.5)',
+                        overflow: 'hidden'
+                      }}>
+                        <CardMedia
+                          component="img"
+                          image={featuredSpeaker.image}
+                          alt={featuredSpeaker.name}
+                          sx={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'top center',
+                          }}
                         />
+                        <Box
+                          sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            background: 'linear-gradient(to bottom, rgba(17, 34, 64, 0) 70%, rgba(17, 34, 64, 0.8) 100%)',
+                          }}
+                        />
+                        <Box
+                          component={motion.div}
+                          variants={animationVariants.glowVariants}
+                          sx={{
+                            position: 'absolute',
+                            bottom: 16,
+                            left: 16,
+                            zIndex: 2
+                          }}
+                        >
+                          <Chip
+                            label="Keynote Speaker"
+                            color="primary"
+                            size="small"
+                            sx={{
+                              fontWeight: 'bold',
+                              backdropFilter: 'blur(5px)',
+                              backgroundColor: alpha(theme.palette.primary.main, 0.8)
+                            }}
+                          />
+                        </Box>
                       </Box>
-                    </motion.div>
-                    
-                    <Typography 
-                      variant="body1" 
-                      sx={{ 
-                        mb: 4,
-                        fontSize: { xs: '0.95rem', md: '1.1rem' },
-                        color: alpha(theme.palette.common.white, 0.8),
-                        maxWidth: '800px',
-                        mx: 'auto',
-                        lineHeight: 1.8
-                      }}
-                    >
-                      We're assembling an exciting lineup of industry experts, thought leaders, and innovators
-                      from around the world. Our speakers will share cutting-edge insights, practical knowledge,
-                      and inspiring stories across all tracks of our innovation week.
-                    </Typography>
-                  </Box>
+                    </Grid>
+                    <Grid item xs={12} md={8}>
+                      <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                        <Box>
+                          <Typography
+                            variant="h4"
+                            component="h2"
+                            id="speakers-title"
+                            sx={{
+                              fontWeight: 700,
+                              mb: 1,
+                              background: 'linear-gradient(90deg, #64ffda, #88cfff)',
+                              backgroundClip: 'text',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              textShadow: '0 2px 10px rgba(100, 255, 218, 0.2)',
+                              fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem' }
+                            }}
+                          >
+                            {featuredSpeaker.name}
+                          </Typography>
+                          
+                          <Typography
+                            variant="subtitle1"
+                            sx={{
+                              color: 'primary.main',
+                              fontWeight: 600,
+                              mb: 0.5,
+                              fontSize: { xs: '0.9rem', md: '1rem' }
+                            }}
+                          >
+                            {featuredSpeaker.role}
+                          </Typography>
+                          
+                          <Typography
+                            variant="subtitle2"
+                            sx={{
+                              color: alpha(theme.palette.common.white, 0.7),
+                              mb: 2,
+                              fontSize: { xs: '0.8rem', md: '0.9rem' }
+                            }}
+                          >
+                            {featuredSpeaker.organization}
+                          </Typography>
+                          
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              fontWeight: 600,
+                              color: alpha(theme.palette.common.white, 0.9),
+                              mb: 2,
+                              fontSize: { xs: '1rem', md: '1.2rem' }
+                            }}
+                          >
+                            Topic: {featuredSpeaker.talk}
+                          </Typography>
+                          
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              mb: 3,
+                              color: alpha(theme.palette.common.white, 0.7),
+                              lineHeight: 1.6,
+                              fontSize: { xs: '0.8rem', md: '0.9rem' }
+                            }}
+                          >
+                            {featuredSpeaker.bio}
+                          </Typography>
+                          
+                          <Box 
+                            sx={{ 
+                              display: 'flex', 
+                              flexWrap: 'wrap', 
+                              alignItems: 'center', 
+                              gap: 2, 
+                              mb: 3 
+                            }}
+                          >
+                            <Box 
+                              sx={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                color: alpha(theme.palette.common.white, 0.7),
+                                fontSize: '0.85rem'
+                              }}
+                            >
+                              <EventAvailableIcon 
+                                sx={{ fontSize: '1rem', mr: 0.5, color: 'primary.main' }} 
+                              />
+                              {featuredSpeaker.day} • {featuredSpeaker.time}
+                            </Box>
+                            
+                            <Box 
+                              sx={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                color: alpha(theme.palette.common.white, 0.7),
+                                fontSize: '0.85rem'
+                              }}
+                            >
+                              <ArticleIcon 
+                                sx={{ fontSize: '1rem', mr: 0.5, color: 'primary.main' }} 
+                              />
+                              {featuredSpeaker.extraInfo}
+                            </Box>
+                          </Box>
+                          
+                          {/* Awards section */}
+                          <Box sx={{ mb: 3 }}>
+                            <Typography
+                              variant="subtitle2"
+                              sx={{
+                                color: 'primary.main',
+                                fontWeight: 600,
+                                mb: 1
+                              }}
+                            >
+                              Awards & Recognition:
+                            </Typography>
+                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                              {featuredSpeaker.awards.map((award, idx) => (
+                                <Chip
+                                  key={idx}
+                                  label={award}
+                                  size="small"
+                                  icon={<SchoolIcon />}
+                                  variant="outlined"
+                                  sx={{ 
+                                    borderColor: alpha(theme.palette.primary.main, 0.5),
+                                    color: alpha(theme.palette.common.white, 0.8)
+                                  }}
+                                />
+                              ))}
+                            </Box>
+                          </Box>
+                          
+                          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Button
+                              component={Link}
+                              href={featuredSpeaker.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              startIcon={<LinkedInIcon />}
+                              variant="outlined"
+                              color="primary"
+                              size="small"
+                              sx={{
+                                borderRadius: 2,
+                                textTransform: 'none',
+                                '&:hover': {
+                                  backgroundColor: alpha(theme.palette.primary.main, 0.1)
+                                }
+                              }}
+                            >
+                              Connect on LinkedIn
+                            </Button>
+                            
+                            {/* Session Details Button */}
+                            <Button
+                              component={Link}
+                              href="#agenda"
+                              variant="contained"
+                              color="primary"
+                              size="small"
+                              sx={{
+                                borderRadius: 2,
+                                textTransform: 'none',
+                                backgroundImage: 'linear-gradient(90deg, #64ffda, #1E88E5)',
+                                color: '#0a192f',
+                                '&:hover': {
+                                  backgroundImage: 'linear-gradient(90deg, #1E88E5, #64ffda)',
+                                }
+                              }}
+                            >
+                              Session Details
+                            </Button>
+                          </Box>
+                        </Box>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
                 </Card>
               </motion.div>
             </Grid>
           </Grid>
 
-          <Box sx={{ textAlign: 'center', mt: 2 }}>
+          {/* Additional speakers coming soon section */}
+          <Box sx={{ textAlign: 'center', mt: 4 }}>
+            <Typography 
+              variant="h6"
+              sx={{ 
+                fontWeight: 600,
+                mb: 2,
+                color: 'primary.main'
+              }}
+            >
+              More Speakers Coming Soon
+            </Typography>
             <Typography 
               variant="body2"
               color="text.secondary"
               sx={{ 
-                fontStyle: 'italic',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: 1,
+                maxWidth: '700px',
+                mx: 'auto',
+                mb: 3,
                 fontSize: { xs: '0.8rem', md: '0.9rem' }
               }}
             >
-              <span aria-hidden="true">✨</span> Stay tuned for speaker announcements in the coming weeks <span aria-hidden="true">✨</span>
+              We're assembling an exciting lineup of industry experts, thought leaders, and innovators
+              from around the world. Stay tuned for more speaker announcements in the coming week.
             </Typography>
           </Box>
         </motion.div>

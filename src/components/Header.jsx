@@ -22,14 +22,8 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
-// We'll remove the HideOnScroll wrapper since we want the header to remain visible
-// Instead, we'll just transform its appearance on scroll
-
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  //const theme = useTheme();
-  // Keeping isMobile for future use, but it's now properly used
-  //const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [scrolled, setScrolled] = useState(false);
   const [animated, setAnimated] = useState(false);
   
@@ -70,6 +64,10 @@ const Header = () => {
     { name: 'Partners', to: 'partners' },
     { name: 'Team', to: 'team' },
   ];
+
+  const handleRegisterClick = () => {
+    window.open('https://forms.gle/tevnykMUzSEidqQB8', '_blank');
+  };
 
   const drawerList = () => (
     <Box
@@ -138,16 +136,12 @@ const Header = () => {
       </List>
       
       <Box sx={{ mt: 4, textAlign: 'center' }}>
+        {/* IMPORTANT: Not using Link component here */}
         <Button
           variant="contained"
           color="primary"
           fullWidth
-          component={Link}
-          to="registration"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
+          onClick={handleRegisterClick}
           sx={{
             py: 1.5,
             fontWeight: 'bold',
@@ -318,15 +312,11 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                {/* IMPORTANT: Not using Link component here, just a regular Button with onClick */}
                 <Button 
                   variant="contained" 
                   color="primary"
-                  component={Link}
-                  to="registration"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
+                  onClick={handleRegisterClick}
                   sx={{ 
                     display: { xs: 'none', md: 'flex' },
                     fontWeight: 600,
@@ -358,8 +348,7 @@ const Header = () => {
                     }
                   }}
                 >
-              
-                Register Now
+                  Register Now
                 </Button>
               </motion.div>
               
