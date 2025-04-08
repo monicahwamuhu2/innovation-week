@@ -1,70 +1,203 @@
-# Getting Started with Create React App
+# MMU Innovation Week 2025 Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Live Demo](![WhatsApp Image 2025-04-08 at 10 37 58_3ffae72f](https://github.com/user-attachments/assets/13ba2dbb-bded-4fb3-964e-b4eaaa5bea00)
+)](https://innovation-week-production.up.railway.app/)
 
-## Available Scripts
+A modern, responsive website for Multimedia University of Kenya's Innovation Week 2025, built with React, Material UI, and enhanced with animations using Framer Motion.
 
-In the project directory, you can run:
+![MMU Innovation Week 2025](https://innovation-week-production.up.railway.app/images/hero.jpg)
 
-### `npm start`
+## 📋 Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+- [Deployment](#deployment)
+- [Event Details](#event-details)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This website serves as the official platform for Multimedia University of Kenya's Innovation Week 2025, an annual event bringing together students, faculty, industry leaders, and innovators to showcase and celebrate technological innovation. The event is scheduled for April 14-17, 2025, with the theme "Empowering Change Through Technology and Innovation."
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Modern & Responsive Design**: Fully responsive UI that works on all devices
+- **Animated Components**: Smooth animations using Framer Motion
+- **Interactive Elements**: Dynamic countdown timer, smooth scrolling navigation
+- **Detailed Program Agenda**: Complete schedule breakdown by day and time slot
+- **Speaker Profiles**: Information about featured speakers (to be announced)
+- **Registration Portal**: Seamless registration process for attendees
+- **Project Submission**: Information for submitting projects and papers
+- **Team Showcase**: Profiles of the organizing team members
+- **Partner Organizations**: Showcasing supporting institutions and companies
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: Frontend library for building user interfaces
+- **Material UI**: Component library for React
+- **Framer Motion**: Animation library for React
+- **React Scroll**: Smooth scrolling between sections
+- **AOS**: Animation on scroll library
+- **Particles.js**: Background particle animations
+- **CountUp**: Animated countup numbers
+- **Railway**: Deployment platform
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+mmu-innovation-week/
+├── public/                  # Public assets, images, and icons
+│   ├── assets/              # Static assets
+│   ├── images/              # Image files for the website
+│   └── index.html           # Main HTML file
+│
+├── src/                     # Source code
+│   ├── components/          # React components
+│   │   ├── commons/         # Common UI components
+│   │   │   ├── AnimatedCard.jsx
+│   │   │   ├── ScrollToTop.jsx
+│   │   │   └── SectionTitle.jsx
+│   │   ├── Agenda.jsx       # Event schedule component
+│   │   ├── CallForProjects.jsx # Project submission section
+│   │   ├── Countdown.jsx    # Countdown timer component
+│   │   ├── Footer.jsx       # Website footer
+│   │   ├── Header.jsx       # Navigation header
+│   │   ├── Hero.jsx         # Hero/banner section
+│   │   ├── Partners.jsx     # Partners showcase
+│   │   ├── Registration.jsx # Registration section
+│   │   ├── Speakers.jsx     # Speakers showcase
+│   │   └── Team.jsx         # Team members section
+│   │
+│   ├── utils/               # Utility functions and constants
+│   │   └── constants.js     # Application constants and data
+│   │
+│   ├── themes/              # Theme configuration
+│   │   └── theme.js         # MUI theme customization
+│   │
+│   ├── App.css              # Main CSS file
+│   ├── App.js               # Main application component
+│   ├── index.css            # Global CSS
+│   ├── index.js             # Application entry point
+│   └── styles.css           # Additional CSS styles
+│
+├── .gitignore               # Git ignore file
+├── package.json             # NPM package configuration
+├── README.md                # Project documentation
+└── yarn.lock                # Yarn lock file
+```
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v16.x or higher)
+- npm or yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/mmu-innovation-week.git
+cd mmu-innovation-week
+```
 
-## Learn More
+2. Install dependencies
+```bash
+# Using npm
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Using yarn
+yarn install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the Project
 
-### Code Splitting
+Start the development server:
+```bash
+# Using npm
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Using yarn
+yarn start
+```
 
-### Analyzing the Bundle Size
+The website will be available at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Deployment
 
-### Making a Progressive Web App
+This project is deployed on Railway. To deploy your own version:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Create an account on [Railway](https://railway.app/)
+2. Connect your GitHub repository
+3. Set up a new project and select the repository
+4. Configure build settings:
+   - Build command: `npm run build` or `yarn build`
+   - Start command: `npm start` or `yarn start`
+5. Deploy the application
 
-### Advanced Configuration
+## 📅 Event Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🗓️ Dates
+April 14-17, 2025
 
-### Deployment
+### 📍 Location
+Multimedia University of Kenya, Magadi Road
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 🎯 Theme
+"Empowering Change Through Technology and Innovation"
 
-### `npm run build` fails to minify
+### 📋 Program Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Day 1 (April 14, 2025)**
+  - Opening webinar on innovation and technology
+
+- **Day 2 (April 15, 2025)**
+  - Opening ceremony
+  - Live debates
+  - Track sessions
+  - Industrial site visits
+
+- **Day 3 (April 16, 2025)**
+  - Panel discussions
+  - Track sessions
+  - Industrial site visits
+
+- **Day 4 (April 17, 2025)**
+  - Paper presentations
+  - Project showcase
+  - Panel discussions
+  - Awards ceremony
+
+### 📝 Registration
+Free for all Multimedia University students and faculty.
+External participants can register through the registration portal.
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## Contact Information
+
+For any inquiries about the event or website, please contact:
+- Email: innovationweek@mmu.ac.ke
+- Phone: +254 123 456 789
+
+Made with ❤️ for Multimedia University of Kenya Innovation Week 2025
