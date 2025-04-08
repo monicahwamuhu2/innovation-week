@@ -136,7 +136,7 @@ const Agenda = () => {
       <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
         <SectionTitle 
           title="Event Agenda" 
-          subtitle="Four Days of Innovation"
+          subtitle="Three Days of Innovation"
           description="Explore our packed schedule of workshops, panels, presentations, and networking opportunities."
         />
 

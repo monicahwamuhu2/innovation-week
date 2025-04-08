@@ -263,10 +263,18 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Benaiah Namunyu',
-    role: 'Program Lead',
+    role: 'Partnerships Lead',
     image: '/images/pl.jpg',
     social: {
       linkedin: 'https://www.linkedin.com/in/benaiah-namunyu-0aa777247/'
+    }
+  },
+  {
+    name: 'Mark Richard',
+    role: 'Programs Lead',
+    image: '/images/mark.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/monicah-wamuhu/'
     }
   },
   {
@@ -301,6 +309,7 @@ export const TEAM_MEMBERS = [
       linkedin: 'https://www.linkedin.com/in/bornface-o-oduor-4478161bb/'
     }
   },
+  
   {
     name: 'Monicah Wamuhu Munyua',
     role: 'Web Developer',

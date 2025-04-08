@@ -208,7 +208,7 @@ const Countdown = () => {
                   lineHeight: 1.5,
                 }}
               >
-                Four days of innovation, networking, and groundbreaking ideas at Multimedia University of Kenya.
+                Three days of innovation, networking, and groundbreaking ideas at Multimedia University of Kenya.
                 Don't miss this opportunity to be part of the future of technology and innovation.
               </Typography>
             </Box>
