@@ -1,7 +1,6 @@
 # MMU Innovation Week 2025 Website
 
-[![Live Demo](![WhatsApp Image 2025-04-08 at 10 37 58_3ffae72f](https://github.com/user-attachments/assets/13ba2dbb-bded-4fb3-964e-b4eaaa5bea00)
-)](https://innovation-week-production.up.railway.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-blue)](https://innovation-week-production.up.railway.app/)
 
 A modern, responsive website for Multimedia University of Kenya's Innovation Week 2025, built with React, Material UI, and enhanced with animations using Framer Motion.
 
