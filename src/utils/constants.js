@@ -274,7 +274,7 @@ export const TEAM_MEMBERS = [
     role: 'Programs Lead',
     image: '/images/mark.jpg',
     social: {
-      linkedin: 'https://www.linkedin.com/in/monicah-wamuhu/'
+      linkedin: 'https://www.linkedin.com/in/markrichard-wahogo-smiek-7b813522a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     }
   },
   {
