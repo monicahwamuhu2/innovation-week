@@ -605,7 +605,7 @@ const Speakers = () => {
       linkedin: "https://www.linkedin.com/in/benson-kinoti-92b66b75/",
       time: "9:30 AM - 10:30 AM",
       day: "April 16th, 2025",
-      location: "Main Auditorium"
+      location: "Pavillion B"
     },
     {
       name: "Eng. Margaret Ogai",
@@ -617,7 +617,7 @@ const Speakers = () => {
       linkedin: "https://www.linkedin.com/in/eng-margaret-ogai-87529072/",
       time: "8:45 AM - 10:00 AM",
       day: "April 17th, 2025",
-      location: "Engineering Faculty Auditorium"
+      location: "Pavillion B"
     }
   ], []);
 
