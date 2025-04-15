@@ -20,27 +20,27 @@ export const AGENDA = [
         type: 'registration'
       },
       {
-        time: '9:00 AM – 9:45 AM',
+        time: '9:00 AM – 9:30 AM',
         title: 'Opening Ceremony & Keynote Addresses',
         description: 'Administration, Organizers',
         type: 'ceremony'
       },
       {
-        time: '9:45 AM – 10:30 AM',
+        time: '9:30 AM – 10:30 AM',
+        title: 'Keynote: Tech for Impact - Inspiring a Generation of Builders',
+        description: '',
+        type: 'presentation',
+        speakers: ['Benson Kinoti - The Head of Education at Google in Sub-Saharan Africa']
+      },
+      {
+        time: '10:30 AM – 11:00 AM',
         title: 'Live Debate: "Will AI and Automation Create More Jobs or Destroy Them?"',
         type: 'debate'
       },
       {
-        time: '10:30 AM – 11:00 AM',
+        time: '11:00 AM – 11:30 AM',
         title: 'Tea Break',
         type: 'break'
-      },
-      {
-        time: '11:00 AM – 11:30 AM',
-        title: 'Track 1: Tech for Impact: AI, Cybersecurity & Emerging Technologies',
-        description: 'AI, cybersecurity, blockchain, IoT, and how they shape digital transformation.',
-        type: 'track',
-        speakers: ['Patricia Muriira - Safaricom Intern', 'Moses Timbwa - Base East Africa Community']
       },
       {
         time: '11:30 AM – 12:00 PM',
@@ -58,10 +58,10 @@ export const AGENDA = [
       },
       {
         time: '12:30 PM – 1:00 PM',
-        title: 'Digital Transformation',
+        title: 'Panel Discussion: "Building Your Startups: From Idea to Execution"',
         description: '',
-        type: 'presentation',
-        speakers: ['Joel - Senior Developer - Safaricom']
+        type: 'panel',
+        speakers: ['Emmanuel Mariaria - Maabara Bunifu', 'Lenox Miheso - Agrovia', 'Ivy - Geek-ssters']
       },
       {
         time: '1:00 PM – 2:00 PM',
@@ -95,7 +95,7 @@ export const AGENDA = [
         title: 'Opening Remarks',
         description: '',
         type: 'ceremony',
-        speakers: ['Prof. Eng, Abel N. Mayaka - Dean Faculty of Engineering and Technology']
+        speakers: ['Prof. Eng. Abel N. Mayaka - Dean Faculty of Engineering and Technology']
       },
       {
         time: '8:45 AM – 10:00 AM',
@@ -117,32 +117,33 @@ export const AGENDA = [
         type: 'break'
       },
       {
-        time: '11:30 AM – 1:00 PM',
+        time: '11:30 AM – 12:30 PM',
         title: 'ITSS Companies Session',
-        description: 'Interested companies session e.g. SeaCom etc',
+        description: 'Interested companies session',
         type: 'panel'
       },
       {
-        time: '1:00 PM – 1:30 PM',
-        title: 'Panel Discussion: "Building Your Startups: From Idea to Execution"',
-        description: '',
-        type: 'panel',
-        speakers: ['Emmanuel Mariaria - Maabara Bunifu', 'Lenox Miheso - Agrovia']
+        time: '12:30 PM – 1:00 PM',
+        title: 'Tech for Impact: AI, Cybersecurity & Emerging Technologies',
+        description: 'AI, cybersecurity, blockchain, IoT, and how they shape digital transformation.',
+        type: 'presentation',
+        speakers: ['Joel - Senior Developer - Safaricom']
       },
       {
-        time: '1:30 PM – 2:30 PM',
+        time: '1:00 PM – 2:00 PM',
         title: 'Lunch Break',
         type: 'break'
       },
       {
-        time: '2:30 PM – 3:30 PM',
+        time: '2:00 PM – 3:30 PM',
         title: 'Projects Presentation',
         type: 'showcase'
       },
       {
         time: '3:30 PM – 4:00 PM',
-        title: 'Keynote: The Role of Institutions and Regulatory Bodies in Supporting Startups',
-        type: 'panel'
+        title: 'Keynote : The role of institutions and regulatory bodies in supporting startups',
+        description: '',
+        type: 'presentation'
       },
       {
         time: '4:00 PM – 4:30 PM',

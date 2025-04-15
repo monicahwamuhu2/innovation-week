@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Box, Typography, Container, Grid, Paper, Button } from '@mui/material';
+import { Box, Typography, Container, Grid, Paper, Button, Chip } from '@mui/material';
 import CountUp from 'react-countup';
 import EventIcon from '@mui/icons-material/Event';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Countdown = () => {
@@ -175,28 +176,78 @@ const Countdown = () => {
                 alignItems: 'center',
               }}
             >
-              <Typography 
-                variant="h5" 
-                component="div"
-                sx={{ 
-                  fontWeight: 700,
-                  mb: 1.5,
-                  position: 'relative',
-                  display: 'inline-block',
-                  '&::after': {
-                    content: '""',
-                    position: 'absolute',
-                    width: '50%',
-                    height: '3px',
-                    bottom: '-8px',
-                    left: '25%',
-                    background: 'linear-gradient(90deg, transparent, #FFD700, transparent)',
-                    borderRadius: '2px',
-                  }
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: { xs: 'column', sm: 'row' }, 
+                alignItems: 'center',
+                gap: 2,
+                mb: 2
+              }}>
+                <Typography 
+                  variant="h5" 
+                  component="div"
+                  sx={{ 
+                    fontWeight: 700,
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1,
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      width: '50%',
+                      height: '3px',
+                      bottom: '-8px',
+                      left: '25%',
+                      background: 'linear-gradient(90deg, transparent, #FFD700, transparent)',
+                      borderRadius: '2px',
+                    }
+                  }}
+                >
+                  <CalendarTodayIcon color="primary" />
+                  April 14 - 17, 2025
+                </Typography>
+                
+                <Chip
+                  icon={<LocationOnIcon />}
+                  label="Pavillion B, MMU"
+                  color="primary"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    padding: '20px 10px',
+                    border: '2px solid',
+                    borderColor: 'primary.main',
+                    backgroundColor: 'rgba(255, 215, 0, 0.15)',
+                    '& .MuiChip-icon': {
+                      color: 'primary.main',
+                    },
+                    boxShadow: '0 0 15px rgba(255, 215, 0, 0.3)'
+                  }}
+                />
+              </Box>
+              
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 2,
+                  mt: 2,
+                  mb: 3,
+                  maxWidth: '550px',
+                  borderRadius: 2,
+                  bgcolor: 'rgba(255, 215, 0, 0.1)',
+                  border: '1px solid rgba(255, 215, 0, 0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 2
                 }}
               >
-                April 14 - 17, 2025
-              </Typography>
+                <LocationOnIcon color="primary" fontSize="large" />
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                  Venue: Multimedia University of Kenya, Pavillion B
+                </Typography>
+              </Paper>
               
               <Typography 
                 variant="body1" 
@@ -244,20 +295,67 @@ const Countdown = () => {
               Innovation Week is Happening Now!
             </Typography>
             
-            <Typography 
-              variant="h5" 
-              sx={{ 
-                mb: 3,
-                color: 'rgba(255, 255, 255, 0.9)',
+            <Box sx={{ 
+              display: 'flex', 
+              flexDirection: { xs: 'column', md: 'row' }, 
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 2,
+              mb: 3
+            }}>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                }}
+              >
+                <CalendarTodayIcon fontSize="small" />
+                April 14 - 17, 2025
+              </Typography>
+              
+              <Chip
+                icon={<LocationOnIcon />}
+                label="Pavillion B, MMU"
+                color="primary"
+                sx={{
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  padding: '20px 10px',
+                  border: '2px solid',
+                  borderColor: 'primary.main',
+                  backgroundColor: 'rgba(255, 215, 0, 0.15)',
+                  '& .MuiChip-icon': {
+                    color: 'primary.main',
+                  },
+                  boxShadow: '0 0 15px rgba(255, 215, 0, 0.3)'
+                }}
+              />
+            </Box>
+            
+            <Paper
+              elevation={0}
+              sx={{
+                p: 2,
+                mb: 4,
+                maxWidth: '650px',
+                mx: 'auto',
+                borderRadius: 2,
+                bgcolor: 'rgba(255, 215, 0, 0.1)',
+                border: '1px solid rgba(255, 215, 0, 0.3)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: 1,
+                gap: 2
               }}
             >
-              <CalendarTodayIcon fontSize="small" />
-              April 14 - 17, 2025
-            </Typography>
+              <LocationOnIcon color="primary" fontSize="large" />
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                Venue: Multimedia University of Kenya, Pavillion B
+              </Typography>
+            </Paper>
             
             <Typography 
               variant="body1" 

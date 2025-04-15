@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import { Box, Typography, Container, Button, Grid } from '@mui/material';
+import { Box, Typography, Container, Button, Grid, Paper} from '@mui/material';
 import { motion, useAnimation } from 'framer-motion';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EventIcon from '@mui/icons-material/Event';
 // Removed unused 'Link' import
 
 // Simple Background Effects Component using CSS animations instead of Framer Motion
@@ -133,19 +135,55 @@ const Hero = () => {
                 animate={controls}
                 variants={fadeInUp}
               >
-                <Typography 
-                  variant="h6" 
-                  component="div"
-                  sx={{ 
-                    color: 'primary.main',
-                    fontWeight: 600,
-                    mb: 1,
-                    textTransform: 'uppercase',
-                    letterSpacing: 2,
+                {/* Date information */}
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <EventIcon sx={{ color: 'primary.main', mr: 1, fontSize: '1.2rem' }} />
+                  <Typography 
+                    variant="h6" 
+                    component="div"
+                    sx={{ 
+                      color: 'primary.main',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      letterSpacing: 2,
+                    }}
+                  >
+                    April 14-17, 2025
+                  </Typography>
+                </Box>
+                
+                {/* Enhanced Venue Information */}
+                <Paper
+                  elevation={0}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    py: 1.5,
+                    px: 2,
+                    mb: 3,
+                    borderRadius: 2,
+                    backgroundColor: 'rgba(255, 215, 0, 0.15)',
+                    border: '2px solid',
+                    borderColor: 'primary.main',
+                    boxShadow: '0 0 15px rgba(255, 215, 0, 0.2)',
+                    animation: 'pulse-venue 3s infinite ease-in-out',
+                    '@keyframes pulse-venue': {
+                      '0%': { boxShadow: '0 0 15px rgba(255, 215, 0, 0.2)' },
+                      '50%': { boxShadow: '0 0 20px rgba(255, 215, 0, 0.4)' },
+                      '100%': { boxShadow: '0 0 15px rgba(255, 215, 0, 0.2)' }
+                    }
                   }}
                 >
-                  April 14-17, 2025
-                </Typography>
+                  <LocationOnIcon sx={{ color: 'primary.main', mr: 1.5, fontSize: '1.8rem' }} />
+                  <Box>
+                    <Typography variant="subtitle2" sx={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.7rem', mb: 0.3 }}>
+                      EVENT VENUE
+                    </Typography>
+                    <Typography variant="h6" sx={{ fontWeight: 700, letterSpacing: 1 }}>
+                      Multimedia University of Kenya, Pavillion B
+                    </Typography>
+                  </Box>
+                </Paper>
               </motion.div>
               
               <motion.div
